@@ -9,7 +9,7 @@ FORMAT = 'utf-8'
 FILES_PATH = os.getcwd() + "\Files\\"  # Thư mục chứa file trên server
 def send_list_file(client_socket):
     try:
-        with open("input.txt", 'r') as file:
+        with open("server_files.txt", 'r') as file:
             file_list = file.read()
         client_socket.sendall(file_list.encode())
         print("Send list file successfully")
